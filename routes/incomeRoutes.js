@@ -23,8 +23,8 @@ router.post("/income", (req, res) => {
   .catch( (err) => {
     console.log(err);
   });
-
 });
+
 
 // get incomes
 router.get("/income", (req, res) => {
@@ -33,6 +33,7 @@ router.get("/income", (req, res) => {
       res.json(incomeData);
     });
 });
+
 
 // delete incomes
 router.delete("/income/:id", (req,res) => {

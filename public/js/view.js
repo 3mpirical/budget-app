@@ -7,15 +7,15 @@ export const VIEW = (function(MDL) {
     return document.querySelector(".add__btn");
   } () );
 
-
   const deleteIncomeBtn = (function() {
     return document.querySelector(".income__list");
   } () );
 
-
   const deleteExpenseBtn = (function() {
     return document.querySelector(".expenses__list");
   } () );
+
+
 
 
   const getInput = function() {
@@ -33,11 +33,6 @@ export const VIEW = (function(MDL) {
   };
 
 
-  const createNode = (element, HTMLContent, parentNode) => {
-    const node = document.createElement(element);
-    node.innerHTML = HTMLContent;
-    parentNode.appendChild(node);
-  };
 
 
   const createIncomeBlock = (incomeObj) => {
@@ -61,7 +56,6 @@ export const VIEW = (function(MDL) {
 
     document.querySelector(".income__list").appendChild(node);
   };
-
 
   const createExpenseBlock = (expenseObj) => {
     const node = document.createElement("div");
@@ -88,6 +82,8 @@ export const VIEW = (function(MDL) {
   };
 
 
+
+
   const removeIncomeBlock = (id) => {
     const incomeList = document.querySelector(".income__list");
     const listItem = document
@@ -96,10 +92,9 @@ export const VIEW = (function(MDL) {
       .parentNode
       .parentNode
       .parentNode;
-      
+
     incomeList.removeChild(listItem);
   };
-
 
   const removeExpenseBlock = (id) => {
     const expenseList = document.querySelector(".expenses__list");
@@ -114,24 +109,25 @@ export const VIEW = (function(MDL) {
   };
 
 
+
+
   const updateTotalIncome = () => {
     document.querySelector(".budget__income--value").textContent = "+ " + MDL.getTotalIncome();
   };
-
 
   const updateTotalExpense = () => {
     document.querySelector(".budget__expenses--value").textContent = "- " + MDL.getTotalExpense();
     document.querySelector(".budget__expenses--percentage").textContent = Math.round(MDL.getTotalExpense()/(MDL.getTotalExpense() + MDL.getTotalIncome()) * 100) + "%";
   };
 
-
   const updateNetBudget = () => {
     document.querySelector(".budget__value").textContent = (MDL.getTotalIncome() - MDL.getTotalExpense());
   };
 
 
-  const updatePercentages = () => {
 
+
+  const updatePercentages = () => {
     const expenseNodeList =  document.querySelectorAll(".expense__value");
     const percentageNodeList = document.querySelectorAll(".expense__percentage");
 
@@ -147,17 +143,18 @@ export const VIEW = (function(MDL) {
       const newPercentage = `${Math.round( parsedContent / MDL.getTotalExpense() * 1000)/10}%`;
 
       percentageNodeList[i].textContent = newPercentage;
-
     }
-
   };
+
+
+
+
 
   return {
     addBtn: addBtn,
     deleteIncomeBtn: deleteIncomeBtn,
     deleteExpenseBtn: deleteExpenseBtn,
     getInput: getInput,
-    createNode: createNode,
     createIncomeBlock: createIncomeBlock,
     createExpenseBlock: createExpenseBlock,
     removeIncomeBlock: removeIncomeBlock,

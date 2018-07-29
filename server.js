@@ -27,7 +27,6 @@ app.use(expenseRoutes);
 
 // default route //
 app.get("*", (req, res) => {
-
   const data = {};
 
   Income.find()
@@ -45,7 +44,6 @@ app.get("*", (req, res) => {
     .catch((err) => {
       console.log(err);
     });
-
 });
 
 

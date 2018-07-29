@@ -24,8 +24,8 @@ router.post("/expense", (req, res) => {
   .catch( (err) => {
     console.log(err);
   });
-
 });
+
 
 // get expenses
 router.get("/expense", (req, res) => {
@@ -34,6 +34,7 @@ router.get("/expense", (req, res) => {
       res.json(expenseData);
     });
 });
+
 
 // delete expenses
 router.delete("/expense/:id", (req, res) => {

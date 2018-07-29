@@ -8,6 +8,9 @@ export const MDL = (function() {
     expense: 0
   };
 
+
+
+
   const resetTotalObj = () => {
     total.expense = 0;
     total.income = 0;
@@ -37,6 +40,9 @@ export const MDL = (function() {
     return total.expense;
   };
 
+
+
+
   const createIncome = (title, income) => {
     return axios.post("/income",{
       title: title,
@@ -51,6 +57,9 @@ export const MDL = (function() {
     });
   };
 
+
+
+
   const getIncomes = function() {
     return axios.get("/income");
   };
@@ -59,6 +68,9 @@ export const MDL = (function() {
     return axios.get("/expense");
   };
 
+
+
+
   const deleteIncome = (id) => {
     return axios.delete(`/income/${id}`);
   };
@@ -66,6 +78,9 @@ export const MDL = (function() {
   const deleteExpense = (id) => {
     return axios.delete(`/expense/${id}`);
   };
+
+
+
 
   return {
     createIncome: createIncome,

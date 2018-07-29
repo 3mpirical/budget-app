@@ -150,9 +150,12 @@ const CTRL = (function(MDL, VIEW) {
 
 
 // CTRL LOGIC ==============================================
+
+// init //
 CTRL.initBudget();
 
 
+// creating incomes||expenses //
 VIEW.addBtn.addEventListener("click", (event) => {
   CTRL.addItem();
 });
@@ -164,6 +167,7 @@ document.addEventListener("keypress", (event) => {
 });
 
 
+// deleting incomes||expenses //
 VIEW.deleteIncomeBtn.addEventListener("click", (event) => {
   if( event.target.matches(".item__delete--icon") ) {
 
@@ -172,7 +176,6 @@ VIEW.deleteIncomeBtn.addEventListener("click", (event) => {
     CTRL.deleteIncomeAndUpdateAll(id);
   }
 });
-
 
 VIEW.deleteExpenseBtn.addEventListener("click", (event) => {
   if( event.target.matches(".item__delete--icon") ) {
