@@ -1,0 +1,24 @@
+{
+  "name": "budget_app",
+  "version": "1.0.0",
+  "description": "A practice project from the Complete Js course on Udemy; with heavily modified structure to implement the module pattern with webpack and express.",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "colors": "^1.3.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "bundle": "webpack --watch"
+  },
+  "author": "3mpirical",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+// Once you make a function to update the percentages on the page, you'll be much closer to completing the View.
+
+// COMPLETED // Also, there were some styles applied to the divs that wrap the income and expense blocks, but the aren't applied because the proper class isn't present. Figure out how to add that class. // COMPLETED //
+
+// COMPLETED // Delete routes income and expense blocks still need to be created.
+// COMPLETED //
+^^^ And update the view so that the correct items are deleted. // COMPLETED //
+
+// Are we supposed to be updating the blocks too?
+
+// Refactor the code as necessary. Make it pretty!!
+^^^*** Especially refactor the addButton function into addIncome and addExpense functions, then add more control flow to the event handlers to differentiate which should be fired.
+^^^*** Also consider refactoring functions to access the total object, they are making a mess of the main MDL namespace. Aren't they?
+
+/ P.S. Remember to take notes on refactoring routes with express.Router, notes on event.keycode and event.which (and 13 is the "enter" code), and on applying styles to multiple DOM elements with Node Lists, and on Event Delegation, and maybe take notes on a DOM string object?
