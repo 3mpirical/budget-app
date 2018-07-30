@@ -83,17 +83,19 @@ export const MDL = (function() {
 
 
   return {
-    createIncome: createIncome,
-    createExpense: createExpense,
-    getIncomes: getIncomes,
-    getExpenses: getExpenses,
     resetTotalObj: resetTotalObj,
+
     addTotalIncome: addTotalIncome,
     addTotalExpense: addTotalExpense,
     subtractTotalIncome: subtractTotalIncome,
     subtractTotalExpense: subtractTotalExpense,
     getTotalIncome: getTotalIncome,
     getTotalExpense: getTotalExpense,
+
+    createIncome: createIncome,
+    createExpense: createExpense,
+    getIncomes: getIncomes,
+    getExpenses: getExpenses,
     deleteIncome: deleteIncome,
     deleteExpense: deleteExpense
   };

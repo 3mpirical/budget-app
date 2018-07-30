@@ -39,7 +39,6 @@ app.get("*", (req, res) => {
     })
     .then(() => {
       res.render("index.ejs", {data: data});
-      // res.json(data);
     })
     .catch((err) => {
       console.log(err);

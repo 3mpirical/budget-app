@@ -117,7 +117,9 @@ export const VIEW = (function(MDL) {
 
   const updateTotalExpense = () => {
     document.querySelector(".budget__expenses--value").textContent = "- " + MDL.getTotalExpense();
-    document.querySelector(".budget__expenses--percentage").textContent = Math.round(MDL.getTotalExpense()/(MDL.getTotalExpense() + MDL.getTotalIncome()) * 100) + "%";
+
+    document.querySelector(".budget__expenses--percentage").textContent =
+      Math.round( (MDL.getTotalExpense()/MDL.getTotalIncome()) * 100) + "%";
   };
 
   const updateNetBudget = () => {
@@ -154,14 +156,18 @@ export const VIEW = (function(MDL) {
     addBtn: addBtn,
     deleteIncomeBtn: deleteIncomeBtn,
     deleteExpenseBtn: deleteExpenseBtn,
+
     getInput: getInput,
+
     createIncomeBlock: createIncomeBlock,
     createExpenseBlock: createExpenseBlock,
     removeIncomeBlock: removeIncomeBlock,
     removeExpenseBlock: removeExpenseBlock,
+
     updateTotalIncome: updateTotalIncome,
     updateTotalExpense: updateTotalExpense,
     updateNetBudget: updateNetBudget,
+
     updatePercentages: updatePercentages
   };
 
